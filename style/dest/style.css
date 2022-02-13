@@ -1,0 +1,143 @@
+.fw-1 {
+  font-weight: 300;
+}
+
+.fw-2 {
+  font-weight: 400;
+}
+
+.fw-3 {
+  font-weight: 700;
+}
+
+.bg-main {
+  background-color: #0d192b;
+}
+
+.bg-card {
+  background-color: #14253d;
+}
+
+.clr-paragraph {
+  color: #8bacda;
+}
+
+.clr-secondary {
+  color: #00fff7;
+}
+
+.clr-line {
+  border-color: #2f415b;
+}
+
+body {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 26px);
+}
+main .card {
+  width: 300px;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px -18px black;
+}
+main .card .img-wrap {
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 9px;
+}
+main .card .img-wrap:hover .img-cover {
+  opacity: 40%;
+}
+main .card .img-wrap:hover .eye-icon {
+  opacity: 100%;
+}
+main .card .img-wrap img {
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+main .card .img-wrap .img-cover {
+  width: 100%;
+  padding-top: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00fff7;
+  opacity: 0%;
+  z-index: 1;
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+main .card .img-wrap .eye-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+main .card .bottom-wrap .status {
+  display: flex;
+  justify-content: space-between;
+}
+main .card .bottom-wrap .status > * {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+main .card .bottom-wrap .text-wrap .name {
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+main .card .bottom-wrap .text-wrap .name a {
+  text-decoration: none;
+  color: inherit;
+}
+main .card .bottom-wrap .text-wrap .name:hover {
+  color: #00fff7 !important;
+}
+main .card .bottom-wrap .text-wrap p {
+  font-size: 18px;
+}
+main .card .footer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+main .card .footer .avatar-wrap img {
+  width: 32px;
+  outline: 1px white solid;
+  border-radius: 50%;
+}
+main .card .footer .text-wrap a {
+  text-decoration: none;
+  color: inherit;
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+main .card .footer .text-wrap a:hover {
+  color: #00fff7 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

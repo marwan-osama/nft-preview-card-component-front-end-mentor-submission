@@ -1,0 +1,172 @@
+$colors: (
+    "blue-primary": hsl(217, 54%, 11%),
+    "blue-secondary": hsl(216, 50%, 16%),
+    "blue-line": hsl(215, 32%, 27%),
+    "soft blue": hsl(215, 51%, 70%),
+    "cyan": rgb(0, 255, 247)
+);
+
+.fw-1 {
+    font-weight: 300;
+}
+.fw-2 {
+    font-weight: 400;
+}
+.fw-3 {
+    font-weight: 700;
+}
+
+.bg-main {
+    background-color: map-get($colors, "blue-primary");
+}
+
+.bg-card {
+    background-color: map-get($colors, "blue-secondary")
+}
+
+.clr-paragraph {
+    color: map-get($colors, "soft blue");
+}
+
+.clr-secondary {
+    color: map-get($colors, "cyan");
+}
+
+.clr-line {
+    border-color: map-get($colors, "blue-line");
+}
+
+body {
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.6em;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 26px);
+    
+    .card {
+        width: 300px;
+        padding: 24px;
+        border-radius: 18px;
+        box-shadow: 0 12px 24px -18px black;
+
+        .img-wrap {
+            width: 100%;
+            padding-top: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 9px;
+
+            &:hover {
+                .img-cover {
+                    opacity: 40%;
+                }
+                .eye-icon {
+                    opacity: 100%;
+                }
+            }
+
+            img {
+                max-width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 0;
+            }
+
+            .img-cover {
+                width: 100%;
+                padding-top: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: map-get($colors, "cyan");
+                opacity: 00%;
+                z-index: 1;
+                transition-property: opacity;
+                transition-duration: 300ms;
+                transition-timing-function: ease;
+            }
+            .eye-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                opacity: 0;
+                transition-property: opacity;
+                transition-duration: 300ms;
+                transition-timing-function: ease;
+            }
+        }
+
+        .bottom-wrap {
+            .status {
+                display: flex;
+                justify-content: space-between;
+
+                & > * {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5em;
+                }
+            }
+
+            .text-wrap {
+                .name {
+                    transition-property: color;
+                    transition-duration: 300ms;
+                    transition-timing-function: ease;
+
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+
+                    &:hover {
+                        color: map-get($colors, "cyan") !important;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            .avatar-wrap {
+                img {
+                    width: 32px;
+                    outline: 1px white solid;
+                    border-radius: 50%;
+                }
+            }
+
+            .text-wrap {
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    transition-property: color;
+                    transition-duration: 300ms;
+                    transition-timing-function: ease;
+
+                    &:hover {
+                        color: map-get($colors, "cyan") !important;
+                    }
+                }
+            }
+        }
+    }
+}
