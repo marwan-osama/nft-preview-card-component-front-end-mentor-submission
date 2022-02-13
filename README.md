@@ -5,6 +5,7 @@
 ## Welcome! 👋
 
 This is my submission for NFT preview card component front-end mentor website challenge.
+live version: https://nftpreviewcardcomponent-fem.netlify.app
 
 **built with SCSS & HTML**
 
